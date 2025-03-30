@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Customization</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      label {
+        font-weight: bold;
+      }
+      select,
+      input[type="submit"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      #output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+      }
+    </style>
+    <script src="proj9.js"></script>
+  </head>
+  <body>
+    <h1>Customize Page Appearance</h1>
+    <form method="GET">
+      <label for="bg">Background Color:</label>
+      <select name="bg" id="bg">
+        <option value="">Default</option>
+        <option value="white">White</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightgray">Light Gray</option>
+      </select>
+      <label for="text">Text Color:</label>
+      <select name="text" id="text">
+        <option value="">Default</option>
+        <option value="black">Black</option>
+        <option value="darkblue">Dark Blue</option>
+        <option value="darkred">Dark Red</option>
+        <option value="darkgreen">Dark Green</option>
+      </select>
+      <label for="fontSize">Font Size (px):</label>
+      <select name="fontSize" id="fontSize">
+        <option value="12">12</option>
+        <option value="14">14</option>
+        <option value="16" selected>16</option>
+        <option value="18">18</option>
+        <option value="20">20</option>
+      </select>
+      <input type="submit" value="Apply" />
+    </form>
+    <div id="output"></div>
+  </body>
+</html>
